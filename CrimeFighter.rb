@@ -7,17 +7,15 @@ class CrimeFighter
   attr_reader :equipment
 
   def name=(name)
-    if name == ""
-      raise "Name can't be blank"
-    end
-    @name = name
+    name == "" ? (raise "Name can't be blank") : @name = name
   end
 
   def age=(age)
-    unless age.is_a? Integer
+    if age.is_a? Integer
+      @age = age
+    else
       raise "Age must be an integer"
     end
-    @age = age
   end
 
   def initialize(name = "Anonymous", age = 30)
@@ -27,18 +25,12 @@ class CrimeFighter
   end
 
   def introduce
-    print "This is #{ name }, age #{ age }. "
+    print "This is #{ @name }, age #{ @age }. "
     yield
   end
 
   def gear_up(*gear)
-    gear.each do |piece_of_gear|
-      if piece_of_gear.is_a? String
-        equipment << piece_of_gear
-      else
-        raise "Pieces of gear must be strings"
-      end
-    end
+    gear.each { |piece| piece == "" ? (raise "Gear can't be blank") : @equipment << piece }
   end
 
   def move
@@ -47,12 +39,13 @@ class CrimeFighter
 
 end
 
-# test_crimefighter = CrimeFighter.new("Superman", 40)
-# puts test_crimefighter.name
-# puts test_crimefighter.age
 
-# test_crimefighter.introduce { puts "Up, up and away!" }
-# test_crimefighter.move
+test_crimefighter = CrimeFighter.new("Superman", 40)
+puts test_crimefighter.name
+puts test_crimefighter.age
 
-# test_crimefighter.gear_up("cape", "boots")
-# puts test_crimefighter.equipment
+test_crimefighter.introduce { puts "Up, up and away!" }
+test_crimefighter.move
+
+test_crimefighter.gear_up("cape", "boots")
+puts test_crimefighter.equipment
