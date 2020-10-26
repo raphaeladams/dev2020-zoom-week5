@@ -42,3 +42,16 @@ song.add_comment("Awesome beat")
 p video.comments, song.comments
 video.play
 song.play
+
+
+class Photo
+    include AcceptsComments
+    def show
+        puts "Displaying #{ object_id }..."
+    end
+end
+
+photo = Photo.new
+photo.add_comment("Beautiful colours")
+p photo.comments
+photo.show
