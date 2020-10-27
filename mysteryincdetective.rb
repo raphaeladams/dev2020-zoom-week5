@@ -21,15 +21,3 @@ class MysteryIncDetective < CrimeFighter
   end
 
 end
-
-test_mysteryinc = MysteryIncDetective.new("Shaggy", 17, "Kanye West", "Matthew McConaughey", "Nicolas Cage")
-puts test_mysteryinc.name
-puts test_mysteryinc.age
-puts test_mysteryinc.suspects
-
-test_mysteryinc.introduce { puts "Zoinks!" }
-test_mysteryinc.solve_mystery
-test_mysteryinc.move
-
-test_mysteryinc.gear_up("flashlight")
-puts test_mysteryinc.equipment

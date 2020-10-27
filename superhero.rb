@@ -24,15 +24,3 @@ class Superhero < CrimeFighter
   end
 
 end
-
-test_superhero = Superhero.new("Superman", 40, "X-ray vision")
-puts test_superhero.name
-puts test_superhero.age
-puts test_superhero.power
-
-test_superhero.introduce { puts "Up, up and away!" }
-test_superhero.catchphrase
-test_superhero.move
-
-test_superhero.gear_up("cape", "boots")
-puts test_superhero.equipment

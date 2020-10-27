@@ -24,13 +24,3 @@ class NinjaTurtle < CrimeFighter
   end
 
 end
-
-test_ninjaturtle = NinjaTurtle.new("Raphael", 18, "Sai")
-puts test_ninjaturtle.name
-puts test_ninjaturtle.age
-puts test_ninjaturtle.weapon
-
-test_ninjaturtle.introduce { puts "Cowabunga!" }
-test_ninjaturtle.eat
-test_ninjaturtle.gear_up
-puts test_ninjaturtle.equipment

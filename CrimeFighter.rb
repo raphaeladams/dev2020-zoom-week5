@@ -33,19 +33,12 @@ class CrimeFighter
     gear.each { |piece| piece == "" ? (raise "Gear can't be blank") : @equipment << piece }
   end
 
+  def remove_gear
+    @equipment.clear
+  end
+
   def move
     puts "Walks, or runs if urgent!"
   end
 
 end
-
-
-test_crimefighter = CrimeFighter.new("Superman", 40)
-puts test_crimefighter.name
-puts test_crimefighter.age
-
-test_crimefighter.introduce { puts "Up, up and away!" }
-test_crimefighter.move
-
-test_crimefighter.gear_up("cape", "boots")
-puts test_crimefighter.equipment
