@@ -1,7 +1,12 @@
 # For the OOP of it
 # Raphael Adams
 
+require_relative 'mixins'
+
 class CrimeFighter
+
+  include MorningRoutine
+  
   attr_reader :name
   attr_reader :age
   attr_reader :equipment

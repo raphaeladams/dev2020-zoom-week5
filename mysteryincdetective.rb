@@ -1,9 +1,13 @@
 # For the OOP of it
 # Raphael Adams
 
+require_relative 'mixins'
 require_relative 'crimefighter'
 
 class MysteryIncDetective < CrimeFighter
+
+  include OffHours
+  
   attr_reader :suspects
 
   def initialize(name = "Anonymous", age = 18, *names)

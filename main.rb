@@ -18,7 +18,10 @@ generic_crimefighter.move
 generic_crimefighter.gear_up("shirt", "boots", "notebook")
 print "#{ generic_crimefighter.equipment } \n"
 generic_crimefighter.remove_gear
-print "#{ generic_crimefighter.equipment } \n\n"
+print "#{ generic_crimefighter.equipment } \n"
+
+generic_crimefighter.coffee_run("Second Cup")
+print "\n\n"
 
 
 puts "TESTING SUPERHERO CLASS"
@@ -34,7 +37,11 @@ superman.move
 superman.gear_up("cape", "boots")
 print "#{ superman.equipment } \n"
 superman.remove_gear
-print "#{ superman.equipment } \n\n"
+print "#{ superman.equipment } \n"
+
+superman.coffee_run("Starbucks")
+superman.practice
+print "\n\n"
 
 
 puts "TESTING NINJATURTLE CLASS"
@@ -49,7 +56,11 @@ raphael.eat
 raphael.gear_up
 print "#{ raphael.equipment } \n"
 raphael.remove_gear
-print "#{ raphael.equipment } \n\n"
+print "#{ raphael.equipment } \n"
+
+raphael.coffee_run("Bridgehead")
+raphael.practice
+print "\n\n"
 
 
 puts "TESTING MYSTERYINCDETECTIVE CLASS"
@@ -66,3 +77,7 @@ shaggy.gear_up("flashlight")
 print "#{ shaggy.equipment } \n"
 shaggy.remove_gear
 print "#{ shaggy.equipment } \n"
+
+shaggy.coffee_run("Tim Hortons")
+shaggy.play_with_dog("Scooby")
+print "\n\n"

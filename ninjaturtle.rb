@@ -1,9 +1,13 @@
 # For the OOP of it
 # Raphael Adams
 
+require_relative 'mixins'
 require_relative 'crimefighter'
 
 class NinjaTurtle < CrimeFighter
+
+  include Training
+  
   attr_reader :weapon
 
   def weapon=(weapon)
