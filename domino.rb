@@ -73,7 +73,16 @@ class Domino
   end
 end
 
-# test_domino = Domino.new(3, 1)
-# test_domino.to_s
 
-Domino.double_six_set.each { |i| i.to_s }
+def swap_tops_and_bottoms(given_list)
+  new_list = given_list.map { |d| Domino.new(d.bottom_dots, d.top_dots) }
+end
+
+
+puts "ORIGINAL SET"
+og_set = Domino.double_six_set
+og_set.each { |i| i.to_s }
+
+puts "MODIFIED SET"
+new_set = swap_tops_and_bottoms(og_set)
+new_set.each { |i| i.to_s }
